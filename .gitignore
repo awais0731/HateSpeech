@@ -131,6 +131,8 @@ env.bak/
 venv.bak/
 envhate/
 
+artifacts/
+
 # Spyder project settings
 .spyderproject
 .spyproject
