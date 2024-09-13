@@ -14,15 +14,14 @@ class DataIngestion:
         self.gcloud = GCloudSync()
 
 
-    
     def get_data_from_gcloud(self) -> None:
-        
         try:
             logging.info("Entered the get_data_from_gcloud method of Data ingestion class")
             os.makedirs(self.data_ingestion_config.DATA_INGESTION_ARTIFACTS_DIR, exist_ok=True)
 
-            self.gcloud.sync_folder_from_gcloud("D:\DataSets\dataset.zip",
-                                                self.data_ingestion_config.DATA_INGESTION_ARTIFACTS_DIR+"\dataset.zip"
+            self.gcloud.sync_folder_from_gcloud(self.data_ingestion_config.BUCKET_NAME,
+                                                self.data_ingestion_config.ZIP_FILE_NAME,
+                                                self.data_ingestion_config.DATA_INGESTION_ARTIFACTS_DIR,
                                                 )
             
             logging.info("Exited the get_data_from_gcloud method of Data ingestion class")
@@ -30,8 +29,8 @@ class DataIngestion:
         
         except Exception as e:
             raise CustomException(e, sys) from e
-
-
+        
+    
     def unzip_and_clean(self):
         logging.info("Entered the unzip_and_clean method of Data ingestion class")
         try: 
@@ -45,8 +44,8 @@ class DataIngestion:
         except Exception as e:
             raise CustomException(e, sys) from e
         
-
     
+
     def initiate_data_ingestion(self) -> DataIngestionArtifacts:
         logging.info("Entered the initiate_data_ingestion method of Data ingestion class")
 

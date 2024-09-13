@@ -60,13 +60,7 @@ class ModelTrainer:
     def initiate_model_trainer(self,) -> ModelTrainerArtifacts:
         logging.info("Entered initiate_model_trainer method of ModelTrainer class")
 
-        """
-        Method Name :   initiate_model_trainer
-        Description :   This function initiates a model trainer steps
-        
-        Output      :   Returns model trainer artifact
-        On Failure  :   Write an exception log and then raise an exception
-        """
+     
 
         try:
             logging.info("Entered the initiate_model_trainer function ")

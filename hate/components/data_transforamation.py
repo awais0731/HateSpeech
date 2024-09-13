@@ -30,7 +30,7 @@ class DataTransformation:
             logging.info(f"Exited the imbalance data_cleaning function and returned imbalance data {imbalance_data}")
             return imbalance_data 
         except Exception as e:
-            raise CustomException(e,sys) from e\
+            raise CustomException(e,sys) from e
             
 
     def raw_data_cleaning(self):

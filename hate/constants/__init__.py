@@ -53,3 +53,16 @@ ACTIVATION = 'sigmoid'
 
 
 
+# Model  Evaluation constants
+MODEL_EVALUATION_ARTIFACTS_DIR = 'ModelEvaluationArtifacts'
+BEST_MODEL_DIR = "best_Model"
+MODEL_EVALUATION_FILE_NAME = 'loss.csv'
+
+
+MODEL_PUSHER_ARTIFACTS_DIR = "ModelPusherArtifacts"
+SAVED_MODEL_DIR = "SavedModel"
+
+MODEL_NAME = 'model.h5'
+APP_HOST = "127.0.0.1"
+APP_PORT = 8080
+
